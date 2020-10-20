@@ -19,10 +19,10 @@ var validNumber = Math.floor(Math.random() * 10); //Will return a random number 
 //We define the generatePassword function first listed in line 6
 function generatePassword () {
   var length = prompt("Set the password length with a number of characters between 8 and 20");
-  charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*",
-  retVal = "";
+  var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*";
+  var randomSelection = "";
   for (var i = 0, n = charset.length; i < length; i++) {
-    retVal += charset.charAt(Math.floor(Math.random() * n));
+    randomSelection += charset.charAt(Math.floor(Math.random() * n));
   }
-  return retVal;
+  return randomSelection;
 }
