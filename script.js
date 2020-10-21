@@ -65,7 +65,7 @@ function generatePassword () {
   if (confirmSymbols){
       characterSet+=symbol;
   }
-  console.log(characterSet);
+  console.log("Character set range used is: "+characterSet);
 
   //Random selection from character strings is defined below
   
@@ -73,6 +73,6 @@ function generatePassword () {
    for (var i=0; i<passwordLength; i++){
      randomSelection += characterSet.charAt(Math.floor(Math.random() * characterSet.length));
    }
-   console.log(randomSelection);
+   console.log("One time password generated: "+randomSelection);
    return randomSelection;     
 }
